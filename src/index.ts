@@ -7,11 +7,14 @@ const app = new Elysia()
     origin: "*",
     methods: ["GET", "POST", "PUT", "DELETE"]
   }))
-  .use(api)
-  .listen(3000);
+  .use(api);
 
-console.log(
-  `🦊 Elysia is running at ${app.server?.hostname}:${app.server?.port}`
-);
+if (import.meta.main) {
+  app.listen(3000);
+
+  console.log(
+    `🦊 Elysia is running at ${app.server?.hostname}:${app.server?.port}`
+  );
+}
 
 export default app.handle;
