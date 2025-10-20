@@ -15,7 +15,8 @@
   },
   "devDependencies": {
     "bun-types": "latest",
-    "tsdown": "^0.15.9"
+    "tsdown": "^0.15.9",
+    "typescript": "^5.9.3"
   },
   "module": "src/index.js"
 }
