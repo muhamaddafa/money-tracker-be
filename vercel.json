@@ -1,6 +1,11 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "outputDirectory": "api",
+	"functions": {
+		"api/index.js": {
+			"runtime": "vercel-node@2.2.0"
+		}
+	},
   "rewrites": [
     {
       "source": "/(.*)",
