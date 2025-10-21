@@ -9,5 +9,11 @@ const app = new Elysia()
   }))
   .use(api);
 
-// Export for Vercel serverless
+// For production deployment
+const PORT = process.env.PORT || 3000;
+app.listen(PORT);
+
+console.log(`🦊 Server is running on port ${PORT}`);
+
+// Export for Vercel serverless (if you still want Vercel compatibility)
 export default app.fetch;
