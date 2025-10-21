@@ -7,4 +7,5 @@ export default new Elysia()
     origin: "*",
     methods: ["GET", "POST", "PUT", "DELETE"]
   }))
-  .use(api);
+  .use(api)
+  .listen(4000, () => console.log("Server running on http://localhost:4000"));
