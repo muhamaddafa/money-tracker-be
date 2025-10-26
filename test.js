@@ -2,14 +2,14 @@ import http from "k6/http";
 import { check, sleep } from "k6";
 
 export const options = {
-  vus: 100, // virtual users
+  vus: 500, // virtual users
   duration: "60s", // test duration
 };
 
 let startTime = new Date().getTime();
 
 export default function () {
-  const res = http.get("http://localhost:3000/api/categories");
+  const res = http.get("http://localhost:8080/api/categories");
   
   check(res, {
     "status is 200": (r) => r.status === 200,

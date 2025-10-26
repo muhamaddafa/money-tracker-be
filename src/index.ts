@@ -1,8 +1,11 @@
-import { Elysia } from "elysia";
-import { api } from "./modules/api";
+import cluster from 'node:cluster'
+import os from 'node:os'
+import process from 'node:process'
 
-const app = new Elysia()
-  .use(api)
-  .listen(8080, () => console.log("Server running on http://localhost:8080"));
-
-export default app;
+if (cluster.isPrimary) {
+  	for (let i = 0; i < os.availableParallelism(); i++)
+    	cluster.fork()
+} else {
+  	await import('./server')
+  	console.log(`Worker ${process.pid} started`)
+}

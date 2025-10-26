@@ -1,11 +1,6 @@
-import cluster from 'node:cluster'
-import os from 'node:os'
-import process from 'node:process'
+import { Elysia } from "elysia";
+import { api } from "./modules/api";
 
-if (cluster.isPrimary) {
-  	for (let i = 0; i < os.availableParallelism(); i++)
-    	cluster.fork()
-} else {
-  	await import('./server')
-  	console.log(`Worker ${process.pid} started`)
-}
+new Elysia()
+  .use(api)
+  .listen(process.env.PORT ?? 8080)
