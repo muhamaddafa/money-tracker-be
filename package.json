@@ -1,12 +1,9 @@
 {
   "name": "money-tracker-be",
   "version": "1.0.50",
-  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "bun run --watch src/index.ts",
-    "build": "bun build src/index.ts --outdir ./dist --target bun",
-    "start": "bun run dist/index.js"
+    "dev": "bun run --watch src/index.ts"
   },
   "dependencies": {
     "@elysiajs/cookie": "^0.3.0-rc.3",
@@ -16,12 +13,7 @@
     "zod": "^4.1.12"
   },
   "devDependencies": {
-    "@vercel/node": "^3.0.0",
-    "bun-types": "latest",
-    "tsdown": "^0.15.9",
-    "typescript": "^5.9.3"
+    "bun-types": "latest"
   },
-  "engines": {
-    "node": ">=18"
-  }
+  "module": "src/index.ts"
 }
