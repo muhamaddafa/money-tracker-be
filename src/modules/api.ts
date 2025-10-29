@@ -5,7 +5,7 @@ import { categoriesAPI } from "./categories";
 import { CustomHttpError } from "../libs/ResponseHandler";
 import { accountsAPI } from "./accounts";
 
-export const api = new Elysia({prefix: "/track"})
+export default new Elysia({prefix: "/track"})
   .use(transactionsAPI)
   .use(balanceAPI)
   .use(categoriesAPI)
