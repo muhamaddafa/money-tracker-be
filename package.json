@@ -15,5 +15,7 @@
   "devDependencies": {
     "bun-types": "latest"
   },
-  "module": "src/index.ts"
+  "module": "index.ts",
+  "type": "module",
+  "private": true
 }
