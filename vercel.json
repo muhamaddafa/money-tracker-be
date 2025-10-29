@@ -1,4 +1,17 @@
 {
-  "bunVersion": "1.x",
-  "installCommand": "bun install"
+  "version": 2,
+  "buildCommand": "bun install",
+  "outputDirectory": "dist",
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/api"
+    }
+  ],
+  "functions": {
+    "api/index.ts": {
+      "runtime": "edge"
+    }
+  },
+  "bunVersion": "1.x"
 }
