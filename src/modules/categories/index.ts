@@ -1,4 +1,4 @@
-import Elysia from "elysia";
+import { Elysia } from "elysia";
 import { addCategoryList, getCategoryList } from "./service";
 
 export const categoriesAPI = new Elysia({prefix: "/categories"})

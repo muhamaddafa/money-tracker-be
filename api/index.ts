@@ -3,5 +3,5 @@ import { api } from "../src/modules/api";
 
 export default new Elysia()
   .get("/", () => "Welcome to the Bun Elysia API!")
-  .use(api)
+  // .use(api)
   .compile();

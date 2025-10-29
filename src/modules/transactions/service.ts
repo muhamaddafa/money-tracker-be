@@ -1,4 +1,4 @@
-import Elysia from "elysia";
+import { Elysia } from "elysia";
 import { supabase } from "../../libs/supabase";
 import { CustomHttpError, CustomHttpSuccess } from "../../libs/ResponseHandler";
 import type { EditTransactionRequest, AddTransactionRequest } from "./model";
