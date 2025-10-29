@@ -1,7 +1,7 @@
 import Elysia from "elysia";
 import { supabase } from "../../libs/supabase";
 import { CustomHttpError, CustomHttpSuccess } from "../../libs/ResponseHandler";
-import { AddTransactionRequest, EditTransactionRequest } from "./model";
+import type { EditTransactionRequest, AddTransactionRequest } from "./model";
 
 export const getTransactionList = new Elysia()
   .get("/", async ({ query }) => {

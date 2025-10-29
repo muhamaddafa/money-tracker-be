@@ -1,7 +1,7 @@
 import Elysia from "elysia";
 import { supabase } from "../../libs/supabase";
 import { CustomHttpError, CustomHttpSuccess } from "../../libs/ResponseHandler";
-import { AddAccountsRequest } from "./model";
+import type { AddAccountsRequest } from "./model";
 
 export const getAccountList = new Elysia()
   .get("/", async () => {

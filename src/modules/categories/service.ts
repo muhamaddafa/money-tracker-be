@@ -1,7 +1,7 @@
 import Elysia from "elysia";
 import { supabase } from "../../libs/supabase";
 import { CustomHttpError, CustomHttpSuccess } from "../../libs/ResponseHandler";
-import { AddCategoryRequest, EditCategoryRequest } from "./model";
+import type { AddCategoryRequest, EditCategoryRequest } from "./model";
 
 export const getCategoryList = new Elysia()
   .get("/", async ({ query }) => {
