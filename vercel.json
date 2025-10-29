@@ -1,5 +1,4 @@
 {
-  "version": 2,
   "buildCommand": "bun install",
   "outputDirectory": "dist",
   "rewrites": [
